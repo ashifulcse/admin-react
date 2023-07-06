@@ -8,22 +8,21 @@ export default function Layout({ children }) {
         <>
             <main className="main" id="top">
                 <div className="container-fluid" data-layout="container">
-                    <Header
+                   
+ 
+                    <Sidebar
                         showSideNav={showSideNav}
                         setShowSideNav={setShowSideNav}
-                    />
+                    /> 
 
-                    <div>
-                        <div>
-                            <Sidebar
-                                showSideNav={showSideNav}
-                                setShowSideNav={setShowSideNav}
-                            />
-                        </div>
-                        <div className={`${showSideNav == true ? 'navbar-style' : ''} `}>
-                            {children}
-                        </div>
+                    <div className={`${showSideNav == true ? 'navbar-style' : ''} `}>
+                        <Header
+                            showSideNav={showSideNav}
+                            setShowSideNav={setShowSideNav}
+                        />
+                        {children}
                     </div>
+                  
 
                 </div>
             </main>
